@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB4DEC1C-8640-4851-BB1B-03914284EE5B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tetrix</RootNamespace>
+    <AssemblyName>tetrix</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="db.cs" />
+    <Compile Include="gameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gameForm.Designer.cs">
+      <DependentUpon>gameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="getName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="getName.Designer.cs">
+      <DependentUpon>getName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listRecord.Designer.cs">
+      <DependentUpon>listRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Num.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Num.Designer.cs">
+      <DependentUpon>Num.cs</DependentUpon>
+    </Compile>
+    <Compile Include="saveGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="saveGame.Designer.cs">
+      <DependentUpon>saveGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="startwindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="startwindow.Designer.cs">
+      <DependentUpon>startwindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="singleGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="singleGame.Designer.cs">
+      <DependentUpon>singleGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tetrix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tetrix.Designer.cs">
+      <DependentUpon>Tetrix.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="gameForm.resx">
+      <DependentUpon>gameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="getName.resx">
+      <DependentUpon>getName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listRecord.resx">
+      <DependentUpon>listRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Num.resx">
+      <DependentUpon>Num.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="saveGame.resx">
+      <DependentUpon>saveGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="singleGame.resx">
+      <DependentUpon>singleGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="startwindow.resx">
+      <DependentUpon>startwindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Tetrix.resx">
+      <DependentUpon>Tetrix.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\savegame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startgame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tetrix.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
